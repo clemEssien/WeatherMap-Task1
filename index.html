@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="workforus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Application</title>    
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery/main.js"></script>
+    <script src="js/jquery/bootstrap.min.js"></script>
+    <script src="js/jquery/loading-state.js"></script>
+    <script src="js/jquery/jquery.validate.min.js"></script>
+    <script src="js/angularjs/angular.min.js"></script>
+    <script src="js/angularjs/dirPagination.js"></script>
+	<script src="js/angularjs/app.js"></script>
+    <script src="js/angularjs/Task1Controller.js"></script>
+    <script src="js/angularjs/controllers.js"></script>
+</head>
+
+<body class="has-fixed-navbar">
+    <div class="sp-wrapper">
+        <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+           <div class="navbar-header blue-bg">
+                <button type="button" data-toggle="sidebar" class="navbar-toggle hamburger hamburger-close left spacing-left-5">
+                	<span class="sr-only">Toggle navigation</span><span class="bar"></span>
+                </button>
+        
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed">
+                    <i aria-hidden="true" class="icon-ellipsis-v"></i>
+                </button>
+                <div class="navbar-brand center">
+                    <a href="dashboard.html" class="logo"><img src="img/logo.png"/></a>
+                    <span class="navbar-brand-text"><h3>Compucorp</h3></span>
+            </div>
+                <button type="button" data-toggle="collapse" data-target="#navbar-search" class="navbar-toggle collapsed no-spacing-right">
+                    <span class="sr-only">Toggle search</span>
+                    <i aria-hidden="true" class="icon-search-2"></i>
+                </button>
+         </div>
+
+        
+            <div class="navbar-container container-fluid">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden-xs">
+                            <a data-toggle="sidebar" class="pl-10" role="button">
+                            	<i class="icon hamburger hamburger-arrow-left">
+                            		<span class="sr-only">Toggle sidebar</span>
+                                	<span class="bar"></span>
+                              	</i>
+                            </a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a class="icon-search" data-toggle="collapse" href="javascript:;" data-target="#navbar-search" role="button">
+                            	<span class="sr-only">Toggle search</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown dropdown-notifications hidden-xs">
+                            <a href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" 
+                           	    data-close-others="true" class="dropdown-toggle">
+                                <i data-count="2" class="notification-icon icon-notification"></i> Notifications
+                            </a>
+                          
+                        </li><!-- /dropdown -->
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle"  aria-expanded="false">
+                  			<i class="icon-assessment"></i> Contact </span>
+                		   </a> 
+                        </li>
+                    </ul>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+        <div class="page-container">
+            <div class="page-content">
+
+                <ng-include src="'layout/sidebar.html'"></ng-include>
+                <div class="content-wrapper">
+                    <!-- Main Content goes in here  -->
+                    <div class="content">                      
+                         <div class="mb-15 mt-15 block"  ng-view> 
+                            <!-- Partial pages are loaded here-->                          
+                         </div>
+                    </div>
+                </div><!-- div content wrapper-->
+
+            </div><!-- div page-content -->
+        </div><!-- div page container  --->
+
+</div> <!--end of sp-wrapper-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!--Default Javascript-->
+    <script src="./js/build/production.min.js"></script>
+    
+    
+        <script src="./js/plugins/sumoselect/jquery.sumoselect.min.js"></script>
+    
+    
+ 
+</body>
+</html>
