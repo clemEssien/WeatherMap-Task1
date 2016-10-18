@@ -1,0 +1,66 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 100;
+    position: relative;
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+
+.btn-darkblue {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-darkblue > .progress-inner {
+    background: #1b4e7b;
+}
+
+.loader {
+    cursor: not-allowed;
+}
+
+.progress-inner {
+    opacity: 0.60;
+    min-height: 100%;
+    display: block;
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+
+.content {
+    z-index: 300;
+    position: relative;
+}
