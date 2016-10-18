@@ -1,0 +1,80 @@
+<link href="css/main.css" rel='stylesheet' type='text/css'>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        <form class="mb-30" id="locationForm">
+          
+            <div class="form-group">
+                <label class="form-group">Post code / Country code</label>
+                <input class="form-control" ng-model="pcode"   type="text" id="pcode" name="pcode" />
+            </div>
+    
+            <div class="text-center">
+               <button type="submit" id="weatherSubmit" ng-click ="getWeather()" class="btn mt-15 custom-expanded-btn btn-primary">Submit</button>
+            </div>        
+            </form>
+        </div>
+       
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+<div class="" ng-controller="Task1Ctrl" id="Task1Wrap">
+  <div class="tablestyle">
+          <button id="apiButton" ng-show="showButton" ng-click="newWeatherData()" style="margin-top:0" 
+          	class="btn mt-0 custom-expanded-btn btn-primary pull-right">New Data
+          </button>
+  </div>      
+  <div class="tablestyle" id="apiInfo" dir-paginate="weatherData in weatherDataFromApi|itemsPerPage:1" >
+   <h4 id ="heading">Weather Information for {{weatherData.name}}, {{weatherData.sys.country}}</h4>
+         <table id="resultTable" class="table table-striped table-condensed table-hover" >
+              <tbody >
+                  <tr >
+                    <th scope="row">Coordinates</th>
+                     <td>  Latitude: {{weatherData.coord.lat}}</td>
+                     <td>  Longitude: {{weatherData.coord.lon}} </td>
+                  </tr>
+                  <tr >
+                    <th scope="row">Weather</th>
+                    <td> {{weatherData.weather[0].main}}</td>
+                     <td> {{weatherData.weather[0].description}}</td>
+                  </tr>
+                 <tr >
+                    <th scope="row">Temperature</th>
+                    <td> {{weatherData.main.temp}}</td>
+                     <td> </td>
+                  </tr>
+                  <tr >
+                    <th scope="row">Pressure</th>
+                    <td> <span >{{weatherData.main.pressure}}</td>
+                     <td> </td>
+                  </tr>
+                  <tr >
+                    <th scope="row">Humidity</th>
+                    <td> {{weatherData.main.humidity}}</td>
+                     <td> </td>
+                  </tr>
+                  <tr >
+                    <th scope="row">Wind</th>
+                    <td> Speed: {{weatherData.wind.speed}}</td>
+                     <td> Degree: {{weatherData.wind.deg}}</td>
+                  </tr>
+              </tbody>
+           </table>
+           <dir-pagination-controls
+                max-size="3"
+                direction-links="true"
+                boundary-links="true" 
+                class="pull-right">
+             </dir-pagination-controls>    
+  </div>
+</div>
+
+<script type="application/javascript">
+  $('.custom-select').SumoSelect({
+                    search: true,
+                    searchText: 'Search options',
+                    placeholder: 'Choose an option'
+                });			 	
+</script>
